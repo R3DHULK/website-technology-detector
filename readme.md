@@ -53,14 +53,6 @@ A browser extension that detects technologies, servers, and other technical deta
 3. View the detected technologies organized by category
 4. Click any technology for more details (where available)
 
-## Screenshots
-
-![Popup Interface](screenshots/popup.png)
-*The extension popup showing detected technologies*
-
-![Detailed View](screenshots/detailed.png)
-*Detailed technology information*
-
 ## Development
 
 To build or modify the extension:
