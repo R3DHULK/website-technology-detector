@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+    "name": "Website Technology Detector",
+    "version": "3.2",
+    "description": "Detects technologies, servers, and other technical details of websites",
+    "permissions": [
+        "activeTab",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "tabs",
+        "dns",
+        "https://www.whois.com/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "icons/icon-48.png",
+            "96": "icons/icon-96.png",
+            "128": "icons/icon-128.png"
+        },
+        "default_title": "Technology Detector"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{df5e9251-2e19-4924-afd7-3f7466d91086}",
+            "strict_min_version": "79.0"
+        }
+    },
+    "icons": {
+        "48": "icons/icon-48.png",
+        "96": "icons/icon-96.png",
+        "128": "icons/icon-128.png"
+    }
+}

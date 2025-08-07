@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: rgba(15, 23, 42, 0.9);
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .header {
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.3em;
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        .detect-button {
+            width: 100%;
+            padding: 12px;
+            background: rgba(59, 130, 246, 0.7);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-sizing: border-box;
+        }
+
+        .tech-group {
+            margin-bottom: 16px;
+        }
+
+        .tech-group h2 {
+            font-size: 1.1em;
+            color: #94a3b8;
+            margin-bottom: 8px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tech-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 6px 0;
+            background: rgba(51, 65, 85, 0.4);
+            border-radius: 6px;
+            font-size: 0.9em;
+        }
+
+        .tech-name {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .tech-icon {
+            font-size: 1.1em;
+            flex-shrink: 0;
+        }
+
+        .tech-name span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .version {
+            color: #cbd5e1;
+            font-size: 0.8em;
+            padding: 3px 6px;
+            background: rgba(15, 23, 42, 0.3);
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-left: 8px;
+        }
+
+        .status-message {
+            text-align: center;
+            color: #94a3b8;
+            padding: 16px;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .error-message {
+            text-align: center;
+            color: #ef4444;
+            padding: 16px;
+            font-style: italic;
+            background: rgba(239, 68, 68, 0.1);
+            border-radius: 8px;
+            font-size: 0.9em;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 6px;
+        }
+
+        /* Advertisement Section */
+        .advertisement {
+            background: rgba(86, 108, 255, 0.1);
+            border: 1px solid rgba(86, 108, 255, 0.5);
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .advertisement p {
+            font-size: 0.8em;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        .advertise-btn {
+            background: rgba(86, 108, 255, 0.7);
+            border: none;
+            border-radius: 6px;
+            color: white;
+            padding: 8px 16px;
+            font-size: 0.8em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Technology Detector</h1>
+        </div>
+        <button id="detectButton" class="detect-button">
+            Start Detection
+        </button>
+        <div id="results">
+            <div class="status-message">Click the button above to start detection</div>
+        </div>
+        <!-- Advertisement Section -->
+        <div class="advertisement">
+            <p>Intercept Web Request With Our New Tool <strong>Netshadow Interceptor</strong>!</p>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/netshadow-interceptor/" target="_blank"
+                class="advertise-btn">
+                Download Now
+            </a>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
